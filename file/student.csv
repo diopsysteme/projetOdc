@@ -1,0 +1,14 @@
+prenom,nom,date_naissance,lieu_naissance,mail,numero,referentiel,matricule,statut,sex,promo
+Aminata,Diop,1998-05-15,Dakar,aminata.diop@example.com,771234567,devweb,P4_DEVWEB_2024_1,1,M,P2
+Sow,Mamadou,1997-08-20,Thiès,mamadou.sow@example.com,776543210,devdata,P4_DEVDAT_2024_2,1,M,P2
+Fatou,Ndiaye,1999-03-10,Saint-Louis,fatou.ndiaye@example.com,778765432,refdig,P4_REFDIG_2024_3,1,M,P5
+Oumar,Diallo,1997-09-25,Ziguinchor,oumar.diallo@example.com,778765432,devweb,P4_DEVWEB_2024_6,1,M,P5
+Aïssatou,Niang,1998-04-12,Louga,aissatou.niang@example.com,776543219,devdata,P4_DEVDAT_2024_7,1,M,P1
+Moussa,Camara,1999-06-30,Kolda,moussa.camara@example.com,771234568,refdig,P4_REFDIG_2024_8,1,M,P1
+Rokhaya,Drame,1996-12-15,Tambacounda,rokhaya.drame@example.com,776543217,aws,P4_AWS_2024_9,actif,M,P1
+Abdoulaye,Gueye,2000-03-20,Fatick,abdoulaye.gueye@example.com,777654320,hackeuse,P6_HACKEUSE_2024_10,actif,M,P4
+Aminata,Traoré,1997-08-10,Dakar,aminata.traore@example.com,778765433,devweb,P6_DEVWEB_2024_11,actif,M,P4
+Mamadou,Dabo,1998-02-28,Thiès,mamadou.dabo@example.com,776543211,devdata,P6_DEVDAT_2024_12,actif,M,P4
+Fatou,Fall,1999-11-05,Saint-Louis,fatou.fall@example.com,771234569,refdig,P6_REFDIG_2024_13,actif,M,P5
+Cheikh,Kane,1996-10-18,Kaolack,cheikh.kane@example.com,776543219,aws,P6_AWS_2024_14,actif,M,P6
+Khady,Diallo,2000-01-10,Touba,khady.diallo@example.com,777654322,hackeuse,P4_HACKEUSE_2024_15,actif,M,P6

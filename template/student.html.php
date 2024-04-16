@@ -5,12 +5,12 @@
     
 </style>
 <div class="bint">
-                    <div>ApPrenants</div>
+                    <div>Apprenants  </div>
                     <div>Promos > List > Details > Apprenants</div>
                 </div>
                 <div class="bmid bmid2">
                     <div class="dashPromE"> 
-                        <div class="promoE">Promotion : <span class="colorG">Promotion 6</span></div>
+                        <div class="promoE">Promotion : <?=printPromo($descriptPactive)?></div>
                         <div class="refE">Referentiel: <span class="colorG">Dev Web/mobile</span></div>
                     </div>
                     <div class="cont">
@@ -64,6 +64,7 @@
                                     <div class="action norm">Action</div>
                                 </div>
                                 <?php
+                                
                                 foreach ($etudiantsPage as $etudiant)
                                 {
                                     ?>
@@ -92,7 +93,7 @@
                                 </div>
                                 <div class="suiPre">
                                     <span>page <?php echo $_GET['pageAff']." of ".$totalPage?></span>
-                                    <a class="pre" style="text-decoration: none; color:black;margin:5px;font-weight:bold;" href="?page=<?=$page?>&pageAff=<?=$pageEtu-1?>"><</a>
+                                    <a class="pre" style="text-decoration: none; color:black;margin:5px;font-weight:bold;" href="<?php if($pageEtu > 1) echo "?page=$page&pageAff=" . ($pageEtu - 1); ?>"><</a>
                                     <?php
                                         for ($i = 1; $i <= $totalPage; $i++)
                                         {
@@ -101,7 +102,7 @@
                                            <?php
                                         }
                                      ?>
-                                    <a class="sui " style="text-decoration: none; color:black;margin:5px;font-weight:bold;" href="?page=<?=$page?>&pageAff=<?=$pageEtu+1?>">></a>
+                                    <a class="sui " style="text-decoration: none; color:black;margin:5px;font-weight:bold;" href="<?php if($pageEtu < $totalPage) echo "?page=$page&pageAff=" . ($pageEtu + 1); ?>">></a>
                                 </div>
                         </div>
                         </div>

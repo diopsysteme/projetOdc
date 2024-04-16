@@ -20,7 +20,7 @@
             <div class="side hide">
                     <div class="logo"><img src="<?=IMG.'logoS.png'?>" alt=""></div>
                     <div class="logText"><i class="fa-solid fa-minus"></i></span><span class="contText">Menu</span></div>
-                    <div class="logText"><span class="log"><i class="fa-solid fa-bars-staggered"></i></span><span class="contText"><a style="color: #000000; text-decoration:none;" href="#">Dashboard</a></span></div>
+                    <div class="logText"><span class="log"><i class="fa-solid fa-bars-staggered"></i></span><span class="contText"><a style="color: #000000; text-decoration:none;" href="?page=dashboard">Dashboard</a></span></div>
                     <div class="logText"><span class="log"><i class="fa-solid fa-clipboard"></i></span><span class="contText"><a style="color: #000000; text-decoration:none;" href="?page=promo1">Prom</a></span></div>
                     <div class="logText"><span class="log"><i class="fa-solid fa-calendar-days"></i></span><span class="contText"><a style="color: #000000; text-decoration:none;" href="?page=referent">Référentiels</a></span></div>
                     <div class="logText"><span class="log"><i class="fa-regular fa-user"></i></span><span class="contText"><a style="color: #000000; text-decoration:none;" href="?page=student">Utilisateurs</a></span></div>

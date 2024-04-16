@@ -1,5 +1,5 @@
 <?php
-$etudiants = array(
+$etudiants1 = array(
         array(
             "prenom" => "Aminata",
             "nom" => "Diop",
@@ -8,9 +8,10 @@ $etudiants = array(
             "mail" => "aminata.diop@example.com",
             "numero" => "771234567",
             "referentiel" => "devweb",
-            "matricule" => "P6_DEVWEB_2024_1",
+            "matricule" => "P4_DEVWEB_2024_1",
             "statut" => 1,
-            "sex" => "M"
+            "sex" => "M",
+            "promo" => "P2"
         ),
         array(
             "nom" => "Sow",
@@ -20,9 +21,10 @@ $etudiants = array(
             "mail" => "mamadou.sow@example.com",
             "numero" => "776543210",
             "referentiel" => "devdata",
-            "matricule" => "P6_DEVDAT_2024_2",
+            "matricule" => "P4_DEVDAT_2024_2",
             "statut" => 1,
-            "sex" => "M"
+            "sex" => "M",
+            "promo" => "P2"
         ),
         array(
             "prenom" => "Fatou",
@@ -32,9 +34,10 @@ $etudiants = array(
             "mail" => "fatou.ndiaye@example.com",
             "numero" => "778765432",
             "referentiel" => "refdig",
-            "matricule" => "P6_REFDIG_2024_3",
+            "matricule" => "P4_REFDIG_2024_3",
             "statut" => 1,
-            "sex" => "M"
+            "sex" => "M",
+            "promo" => "P5"
         ),
         array(
             "prenom" => "Oumar",
@@ -44,9 +47,10 @@ $etudiants = array(
             "mail" => "oumar.diallo@example.com",
             "numero" => "778765432",
             "referentiel" => "devweb",
-            "matricule" => "P6_DEVWEB_2024_6",
+            "matricule" => "P4_DEVWEB_2024_6",
             "statut" => 1,
-            "sex" => "M"
+            "sex" => "M",
+            "promo" => "P5"
         ),
         array(
             "prenom" => "Aïssatou",
@@ -56,9 +60,10 @@ $etudiants = array(
             "mail" => "aissatou.niang@example.com",
             "numero" => "776543219",
             "referentiel" => "devdata",
-            "matricule" => "P6_DEVDAT_2024_7",
+            "matricule" => "P4_DEVDAT_2024_7",
             "statut" => 1,
-            "sex" => "M"
+            "sex" => "M",
+            "promo" => "P1"
         ),
         array(
             "prenom" => "Moussa",
@@ -68,9 +73,10 @@ $etudiants = array(
             "mail" => "moussa.camara@example.com",
             "numero" => "771234568",
             "referentiel" => "refdig",
-            "matricule" => "P6_REFDIG_2024_8",
+            "matricule" => "P4_REFDIG_2024_8",
             "statut" => 1,
-            "sex" => "M"
+            "sex" => "M",
+            "promo" => "P1"
         ),
         array(
             "prenom" => "Rokhaya",
@@ -80,9 +86,10 @@ $etudiants = array(
             "mail" => "rokhaya.drame@example.com",
             "numero" => "776543217",
             "referentiel" => "aws",
-            "matricule" => "P6_AWS_2024_9",
+            "matricule" => "P4_AWS_2024_9",
             "statut" => "actif",
-            "sex" => "M"
+            "sex" => "M",
+            "promo" => "P1"
         ),
         array(
             "prenom" => "Abdoulaye",
@@ -94,7 +101,8 @@ $etudiants = array(
             "referentiel" => "hackeuse",
             "matricule" => "P6_HACKEUSE_2024_10",
             "statut" => "actif",
-            "sex" => "M"
+            "sex" => "M",
+            "promo" => "P4"
         ),
         array(
             "prenom" => "Aminata",
@@ -106,7 +114,8 @@ $etudiants = array(
             "referentiel" => "devweb",
             "matricule" => "P6_DEVWEB_2024_11",
             "statut" => "actif",
-            "sex" => "M"
+            "sex" => "M",
+            "promo" => "P4"
         ),
         array(
             "prenom" => "Mamadou",
@@ -118,7 +127,8 @@ $etudiants = array(
             "referentiel" => "devdata",
             "matricule" => "P6_DEVDAT_2024_12",
             "statut" => "actif",
-            "sex" => "M"
+            "sex" => "M",
+            "promo" => "P4"
         ),
         array(
             "prenom" => "Fatou",
@@ -130,7 +140,8 @@ $etudiants = array(
             "referentiel" => "refdig",
             "matricule" => "P6_REFDIG_2024_13",
             "statut" => "actif",
-            "sex" => "M"
+            "sex" => "M",
+            "promo" => "P5"
         ),
         array(
             "prenom" => "Cheikh",
@@ -142,7 +153,8 @@ $etudiants = array(
             "referentiel" => "aws",
             "matricule" => "P6_AWS_2024_14",
             "statut" => "actif",
-            "sex" => "M"
+            "sex" => "M",
+            "promo" => "P6"
         ),
         array(
             "prenom" => "Khady",
@@ -152,17 +164,52 @@ $etudiants = array(
             "mail" => "khady.diallo@example.com",
             "numero" => "777654322",
             "referentiel" => "hackeuse",
-            "matricule" => "P6_HACKEUSE_2024_15",
+            "matricule" => "P4_HACKEUSE_2024_15",
             "statut" => "actif",
-            "sex" => "M"
+            "sex" => "M",
+            "promo" => "P6"
         )
     );
-    $eleByPage=5;
+    
+    
+// writeCsv(FILE.$page,".csv",$etudiants1);
+$etudiants=readCsv(FILE.$page,".csv");
+// var_dump($etudiants);
+$etudiants=filterByprom($etudiants,$namePactive);
+
+    if (isset($_POST["search"])) {
+        $_SESSION['filtStu'] = $_POST["search"];
+    }else{
+
+    }
+
+    $result = array();
+if (isset($_POST["search"])) {
+    $search = $_SESSION['filtStu'];
+    foreach ($etudiants as $apprenant) {
+        if (strpos(strtolower($apprenant["prenom"]), strtolower($search)) !== false || 
+             strpos(strtolower($apprenant["nom"]), strtolower($search)) !== false || 
+             strpos(strtolower($apprenant["mail"]), strtolower($search)) !== false || 
+             strpos(strtolower($apprenant["numero"]), strtolower($search)) !== false || 
+             strpos(strtolower($apprenant["referentiel"]), strtolower($search)) !== false || 
+             strpos(strtolower($apprenant["matricule"]), strtolower($search)) !== false || 
+             strpos(strtolower($apprenant["statut"]), strtolower($search)) !== false || 
+             strpos(strtolower($apprenant["sex"]), strtolower($search)) !== false) 
+             {
+            $result[] = $apprenant;
+        }
+    }
+}
+ else {
+        $result = $etudiants;
+    }
+    
+    $eleByPage = 4;
     $pageEtu = isset($_GET['pageAff']) ? $_GET['pageAff'] : 1;
-    $totalPage=ceil(count($etudiants)/$eleByPage); //ceil() fonction qui arrondit par exee
-    // echo($pageEtu<1 || $pageEtu>$totalPage);
-    if($pageEtu<1 || $pageEtu>$totalPage)
-    header("Location:?page=$page&pageAff=1");
-    $eleDeb = ($pageEtu-1)*$eleByPage;
-    $etudiantsPage = array_slice($etudiants, $eleDeb, $eleByPage);
+    $totalPage = ceil(count($result) / $eleByPage);
+    
+   
+    
+    $eleDeb = ($pageEtu - 1) * $eleByPage;
+    $etudiantsPage = array_slice($result, $eleDeb, $eleByPage);
     

@@ -1,0 +1,31 @@
+name,dateDeb,dateFin,description,filieres,etat
+P1,2017-07-03,2023-07-03,"Promotion 1","'Dev Web/Mobile,active',
+                'Referent Digital,active',
+                'Develeppement Data,active',
+                'AWS,active',
+                'Hackeuse,active'",inactive
+P2,2018-07-03,2023-07-03,"Promotion 2","'Dev Web/Mobile,active',
+                'Referent Digital,active',
+                'Develeppement Data,active',
+                'AWS,active',
+                'Hackeuse,active'",active
+P3,2019-07-03,2023-07-03,"Promotion 3","'Dev Web/Mobile,active',
+                'Referent Digital,active',
+                'Develeppement Data,active',
+                'AWS,active',
+                'Hackeuse,active'",inactive
+P4,2020-07-03,2023-07-03,"Promotion 4","'Dev Web/Mobile,active',
+                'Referent Digital,active',
+                'Develeppement Data,active',
+                'AWS,active',
+                'Hackeuse,active'",inactive
+P5,2021-07-03,2023-07-03,"Promotion 5","'Dev Web/Mobile,active',
+        'Referent Digital,active',
+        'Develeppement Data,active',
+        'AWS,active',
+        'Hackeuse,active'",inactive
+P6,2023-07-03,2023-07-03,"Promotion 6","'Dev Web/Mobile,active',
+                'Referent Digital,active',
+                'Develeppement Data,active',
+                'AWS,active',
+                'Hackeuse,active'",inactive

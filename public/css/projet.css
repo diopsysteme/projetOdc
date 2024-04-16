@@ -1,6 +1,6 @@
 
 *{
-    box-sizing: border-box;
+    box-contizing: border-box;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -402,6 +402,7 @@ background-color: white;
 .page .bup div .menu{
     background-color: lightgrey;
 }
+.page .bmid .cont.dash .listCrud .crud .input,
 .page .bup div .input{
 width: 20vw;
 position: relative;
@@ -632,7 +633,7 @@ input:valid+span{
 display: none;
 }
 input:checked{
-background-color: rgb(53, 134, 124);
+background-color: #35867c;
 }
 input::placeholder
 {

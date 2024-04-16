@@ -1,38 +1,53 @@
 <div class="bint">
-            <div>PROMOTION</div>
+            <div>PROMOTION : <?=printPromo($descriptPactive)?></div>
             <div>Promos > Création</div>
             </div>
             <div class="bmid ref1">
                <div class="divRef">
                 <?php 
-                foreach ($referentielsFiltres as $referentiel) {?>
+                foreach ($referentielsFiltres as $referentiel) {
+                    if($referentiel['etat']=="active") {?>
                     <div>
                         <div class="point">...</div>
                         <div class="contInRef">
-                            <div class="photo"><img src="<?=IMG.'salle.jpeg'?>" alt=""></div>
+                            <div class="photo"><img src="<?=IMG.'referentiel/'.$referentiel['image']?>" alt=""></div>
                             <div class="nomRef"><?=$referentiel['nom']?></div>
                             <div class="statutRef colorBase"><?=$referentiel['etat']?></div>
                         </div>
                     </div>
-                    <?php }?>
+                    <?php } }
+                    ?>
                </div>
             <div class="divRef">
             <div class="specRef">
-                        <form action="" method="post">
+                        <form action="" method="post"  enctype="multipart/form-data">
                             <div class="nomRef">Nom Referentiel</div>
+                            <div class="error ed" ><?=$_SESSION["error"]?></div>
                             <div class="inpRef">
                                 <label for="">Libellé</label>
                                 <div class="input">
-                                    <span class="icInpRef" style="position: absolute;left:calc(.5vw + .5vh);top:35%"><i class="fa-regular fa-user"></i></span> <input type="text" name="password" required placeholder="Recherche par matricule">
+                                    <span class="icInpRef" style="position: absolute;left:calc(.5vw + .5vh);top:35%"><i class="fa-regular fa-user"></i></span> 
+                                    <input type="text" name="libellé"  placeholder="Recherche par matricule">
                                 </div>
                             </div>
                             <div class="inpRef">
                                 <label for="">Description</label>
                                 <div class="input">
-                                    <span class="icInpRef" style="position: absolute;left:calc(.5vw + .5vh);top:35%"><i class="fa-regular fa-user"></i></span> <input type="textarea" name="password" required placeholder="Recherche par matricule">
+                                    <span class="icInpRef" style="position: absolute;left:calc(.5vw + .5vh);top:35%"><i class="fa-regular fa-user"></i></span> 
+                                    <input type="textarea" name="description"  placeholder="Recherche par matricule">
                                 </div>
                             </div>
-                            <div class="btn"><button type="submit">Enregistrer</button></div>
+                            <div class="inpRef special">
+                                <div class="toggle">
+                                   <input type="checkbox" name="etat">
+
+                               </div>
+                               <div class="subImg"> <label for="">image</label>
+                                <div class="input">
+                                    <input type="file" name="img" accept="image/*"  placeholder="Recherche par matricule">
+                                </div></div>
+                            </div>
+                            <div class="btn" ><button name="addFiliere" type="submit">Enregistrer</button></div>
                         </form>
                     </div>
             </div>
@@ -124,9 +139,48 @@
         position: relative;
 
     }
+    .page .bmid .divRef .specRef form .error{
+        width: 100%;
+        height: 3%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(.5vh + .5vw);
+        font-weight: bold;
+        color: red;
+    }
+    .page .bmid .divRef .specRef form .inpRef.special{
+        width: 100%;
+        height: 20%;
+        display: flex;
+       
+        flex-direction: row;
+        position: relative;
+    }
+    .page .bmid .divRef .specRef form .inpRef.special .toggle{
+        width: 20%;
+        height: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .page .bmid .divRef .specRef form .inpRef.special .subImg{
+        width: 70%;
+        height: 95%;
+        display: flex;
+     
+    }
+    .page .bmid .divRef .specRef form .inpRef.special div{
+        height:90%;
+        display: flex;
+        position: relative;
+        font-size: 1vh;
+        flex-direction: column;
+
+    }
     .page .bmid .divRef .specRef form .inpRef{
         position: relative;
-        height:30%;
+        height:20%;
         display: flex ;
         flex-direction: column;
         align-items: start;
@@ -148,8 +202,11 @@
         justify-content: center;
         margin: 0;
     }
+    .page .bmid .divRef .specRef form .inpRef.special .input input{
+        width: 100%;
+    }
     .page .bmid .divRef .specRef form .inpRef .input input{
-        width: 70%;
+        width: 80%;
     }
 
     .page .bmid .divRef .specRef form .nomRef{

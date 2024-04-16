@@ -11,7 +11,7 @@
 <body>
     <div class="login">
         <div class="logo"><img src="logoS.png" alt=""></div>
-        <form action="?" method="POST">
+        <form action="?page=dashboard" method="POST">
             <div class="contLog">
                 <?php if(isset($_SESSION["error"])) {?>
                     <div class="error"><span class="textIntern"><?=$_SESSION["error"]?></span></div>

@@ -1,35 +1,45 @@
 <?php
 
 
-    $referentiels = [
-        [
-            "nom" => "Dev Web/Mobile",
-            "etat" => "active",
-        ],
-        [
-            "nom" => "Referent Digital",
-            "etat" => "active",
-        ],
-        [
-            "nom" => "AWS",
-            "etat" => "active",
-        ],
-        [
-            "nom" => "Hackeuse",
-            "etat" => "active",
-        ],
-        [
-            "nom" => "Develeppement Data",
-            "etat" => "active",
-        ]
-    ];
+    // $referentiels = [
+    //     [
+    //         "nom" => "Dev Web/Mobile",
+    //         "etat" => "active",
+    //         "promo" => "P1 P2 P3 P4 P5 P6"
+    //     ],
+    //     [
+    //         "nom" => "Referent Digital",
+    //         "etat" => "active",
+    //         "promo" => "P1 P2 P3 P4 P5 P6"
+    //     ],
+    //     [
+    //         "nom" => "AWS",
+    //         "etat" => "active",
+    //         "promo" => "P1 P2 P3 P4 P5 P6"
+    //     ],
+    //     [
+    //         "nom" => "Hackeuse",
+    //         "etat" => "active",
+    //         "promo" => "P1 P2 P3 P4 P5 P6"
+    //     ],
+    //     [
+    //         "nom" => "Develeppement Data",
+    //         "etat" => "active",
+    //         "promo" => "P1 P2 P3 P4 P5 P6"
+    //     ]
+    // ];
+    // writeCsv(FILE.$page,".csv",$referentiels);
 
 //search est le name de l'input sur la page principale 
-    function filtrerReferentiels($referentiel) {
-        return $referentiel['nom'] == $_POST["search"] || empty($_POST["search"]);
+$filieres=readCsv(FILE."referent",".csv");
+$a=array();
+foreach($filieres as $fil){
+    if (stripos($fil["promo"], $_SESSION["promo"]["name"]) !== false)
+    {
+        $a[]=$fil;
     }
-    
-    $referentielsFiltres = array_filter($referentiels, 'filtrerReferentiels');
-    
-    
+}
+$referentielsFiltres = filt($a,$_POST['search']);
+
+
 

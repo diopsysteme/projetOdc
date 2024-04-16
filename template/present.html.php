@@ -1,5 +1,5 @@
 <div class="bint">
-                <div>PRESENCES</div>
+                <div>PRESENCES : <?=printPromo($descriptPactive)?></div>
                 <div>Etudiants > Presences</div>
             </div>
 <div class="bmid bmid2">
@@ -14,13 +14,12 @@
                             </select>
                             <select name="referentiel" id="" class="Referentiel">
                             <option value="" > Référentiels </option>
-                            <option value="devweb"  <?php if($_POST["referentiel"]=="devweb") echo "selected"?>> Dev Web/Mobile </option>
-                            <option value="devdata"  <?php if($_POST["referentiel"]=="devdata") echo "selected"?>> Developpement Data </option>
-                            <option value="refdig"  <?php if($_POST["referentiel"]=="refdig") echo "selected"?>>Référent Digital</option>
-                            <option value="aws"  <?php if($_POST["referentiel"]=="aws") echo "selected"?>> AWS </option>
-                            <option value="hackeuse"  <?php if($_POST["referentiel"]=="hackeuse") echo "selected"?>> Hackeuse </option>
+                            <?php foreach($referentielsFiltres as $refer){?>
+                                <option value="<?=$refer["nom"]?>"  <?php if($_POST["referentiel"]==$refer["nom"]) echo "selected"?>><?=$refer["nom"]?> </option>
+                            <?php } ?>
+                            
                             </select>
-                            <input type="date" name="jour" placeholder="Date" value="<?= date('Y-m-d') ?>">
+                            <input type="date" name="jour" placeholder="Date" value="<?php if($_POST["jour"] == "refdig") echo $_POST["jour"]; else echo date('Y-m-d'); ?>">
                             <button type="submit" class="butFilt">Rafraichir</button>
                         </form>
                         <div class="listEtu">
@@ -51,7 +50,7 @@
                                 ?>
                         </div>
                         <div class="paginate">
-                                <div class="linkPage" style="margin:5px">
+                                <div class="linkPage">
                                     
                                    <select name="eleBypage" id="">
                                     <option value="5">5</option>
@@ -62,16 +61,16 @@
                                 </div>
                                 <div class="suiPre">
                                     <span>page <?php echo $_GET['pageAff']." of ".$totalPage?></span>
-                                    <a class="pre" style="text-decoration: none; color:black;margin:5px;font-weight:100;" href="?page=<?=$page?>&pageAff=<?=$pageEtu-1?>"><</a>
+                                    <a class="pre" style="text-decoration: none; color:black;margin:5px;font-weight:bold;" href="<?php if($pageEtu > 1) echo "?page=$page&pageAff=" . ($pageEtu - 1); ?>"><</a>
                                     <?php
                                         for ($i = 1; $i <= $totalPage; $i++)
                                         {
                                             ?>
-                                                <a style="text-decoration: none; color:black;margin:5px;font-weight:100;" href="?page=<?=$page?>&pageAff=<?=$i?>"><?=$i?></a> 
+                                                <a style="text-decoration: none; color:black;margin:5px;font-weight:bold;" href="?page=<?=$page?>&pageAff=<?=$i?>"><?=$i?></a> 
                                            <?php
                                         }
                                      ?>
-                                    <a class="sui " style="text-decoration: none; color:black;margin:5px;font-weight:100;" href="?page=<?=$page?>&pageAff=<?=$pageEtu+1?>">></a>
+                                    <a class="sui " style="text-decoration: none; color:black;margin:5px;font-weight:bold;" href="<?php if($pageEtu < $totalPage) echo "?page=$page&pageAff=" . ($pageEtu + 1); ?>">></a>
                                 </div>
                         </div>
                     </div>

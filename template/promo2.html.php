@@ -1,5 +1,5 @@
 <div class="bint">
-                <div>PROMOTION</div>
+                <div>PROMOTION :  <?=printPromo($descriptPactive)?></div>
                 <div>Promos > Création</div>
             </div>
             <div class="bmid">
