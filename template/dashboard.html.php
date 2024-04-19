@@ -116,7 +116,7 @@ justify-content: start;
 }
 .P2:checked {
     color: red;
-    <?php  var_dump($_COOKIE); ?>
+    <?php  ?>
     
 }
         </style>
@@ -151,6 +151,8 @@ justify-content: start;
                             ?>
                                 <div class="listPromo element">
                                     <div class="<?php if($namePactive==$promo["name"]) echo "colorG"; else echo "red"; ?>"><span><img src="<?php echo IMG.'promo.png' ?>" alt=""></span><?=$promo["description"]?></div>
+                                    <div > </div>
+
                                     <div class="image norm "><?=convdate($promo["dateDeb"])?></div>
                                     <div class="nom norm "><?=convdate($promo["dateFin"])?></div>
                                     <div class=""><form action="" method="post">

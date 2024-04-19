@@ -14,7 +14,10 @@
                             </select>
                             <select name="referentiel" id="" class="Referentiel">
                             <option value="" > Référentiels </option>
-                            <?php foreach($referentielsFiltres as $refer){?>
+                            
+                            <?php 
+                            
+                            foreach($referentielsFiltres as $refer){?>
                                 <option value="<?=$refer["nom"]?>"  <?php if($_POST["referentiel"]==$refer["nom"]) echo "selected"?>><?=$refer["nom"]?> </option>
                             <?php } ?>
                             

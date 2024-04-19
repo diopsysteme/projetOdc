@@ -34,21 +34,36 @@ function printPromo($descriptPactive) {
 function readCsv($file, $extension)
 {
     $fp = fopen($file . $extension, "r");
+    $datas = [];
 
     if ($fp !== false) {
         // Lire la première ligne pour obtenir les noms des champs
         $headers = fgetcsv($fp);
 
+        while (($row = fgetcsv($fp)) !== false) {
+            // Combiner les noms de champs avec les données de la ligne actuelle
+            $rowData = array_combine($headers, $row);
+            $datas[] = $rowData;
+            
+        }
+        
+        return $datas;
+    } else {
+        die("Fichier introuvable");
+    }
+}
+function readhCsv($file) {
+    $fp = fopen($file, "r");
+    if ($fp !== false) {
+        // Lire la première ligne pour obtenir les noms des champs
+        $headers = fgetcsv($fp);
         $data = array();
-
         while (($row = fgetcsv($fp)) !== false) {
             // Combiner les noms de champs avec les données de la ligne actuelle
             $rowData = array_combine($headers, $row);
             $data[] = $rowData;
         }
-
         fclose($fp);
-
         return $data;
     } else {
         die("Fichier introuvable");
@@ -58,7 +73,7 @@ function readCsv($file, $extension)
 
 function writeCsv($file, $extention, $data)
 {
-    $fp = fopen($file . $extention, 'w');
+    $fp = fopen($file . $extention, 'wa');
 
     // Écrire les noms de colonnes dans le fichier CSV
     fputcsv($fp, array_keys($data[0]));

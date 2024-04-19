@@ -175,7 +175,8 @@ $etudiants1 = array(
 // writeCsv(FILE.$page,".csv",$etudiants1);
 $etudiants=readCsv(FILE.$page,".csv");
 // var_dump($etudiants);
-$etudiants=filterByprom($etudiants,$namePactive);
+if(isset($namePactive)){
+    $etudiants=filterByprom($etudiants,$namePactive);
 
     if (isset($_POST["search"])) {
         $_SESSION['filtStu'] = $_POST["search"];
@@ -203,13 +204,9 @@ if (isset($_POST["search"])) {
  else {
         $result = $etudiants;
     }
-    
-    $eleByPage = 4;
+    $eleByPage = 2;
     $pageEtu = isset($_GET['pageAff']) ? $_GET['pageAff'] : 1;
     $totalPage = ceil(count($result) / $eleByPage);
-    
-   
-    
     $eleDeb = ($pageEtu - 1) * $eleByPage;
     $etudiantsPage = array_slice($result, $eleDeb, $eleByPage);
-    
+}

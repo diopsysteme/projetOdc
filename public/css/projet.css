@@ -268,14 +268,15 @@ margin-right:2px ;   }
 }
 input[type="file"]::-webkit-file-upload-button {
     border: none;
-    margin: 10px 10px 10px 30px;
     border-radius: 5px;
     cursor: pointer;
-    width: 20%;
-    height: 60%;
+    font-size: 1vh;
+    height: 70%;
+    content: "donnez un ";
+
   }
 input::content{
-    margin-left: 20px;
+    content: "donnez un ";
 }
 .red{
     color: red;
@@ -339,6 +340,20 @@ align-items: center;
     background-color:rgb(53, 134, 124);
     cursor: pointer;
     border-radius: 10px;
+}
+.side .logText.desactive .desactive{
+    
+}
+.side .logText.desactive{
+    background-color: white;
+    cursor:default;
+    z-index: 2;
+    opacity: .5;
+    cursor: default;
+    *{
+        cursor: default;
+        pointer-events: none;
+    }
 }
 .side .logText span{
 margin-left: 1%;
@@ -1089,18 +1104,18 @@ border: none;
 outline:none ;
 color: white;
 font-size: 1.5vh;}
-.contAdEtMass .input input[type="file"]::-webkit-file-upload-button {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 15vw;
-    height: 2vh;
-    translate:15vw 5vh  ;
-    border: 1px solid;
-    content: "drop file";
-  }
+    .contAdEtMass .input input[type="file"]::-webkit-file-upload-button {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 15vw;
+        height: 2vh;
+        translate:15vw 5vh  ;
+        border: 1px solid;
+        content: "drop file";
+    }
 .page .bmid .cont .vertical .vertInt div:nth-child(1),
 .page .bmid .cont .vertical .vertInt div:nth-child(3){
 width: calc(2vw + 2vh);
@@ -1262,8 +1277,9 @@ justify-content: center;
     }
     }
     .contLog .left{
-        margin-right: 78%;
+        margin-right: 70%;
         font-size: 1.5vh;
+        width: 25%;
     }
     .contLog label:nth-child(2){
     }
