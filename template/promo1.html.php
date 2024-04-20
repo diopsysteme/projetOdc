@@ -44,11 +44,11 @@ i{
                     <div class="contInp2">
                         <div style="height:25vh;" class="labSelect">Selectionnez un ou plusieurs ref</div>
                         <form action="" method="post">
+                            <?php 
+                                $uniques = uniqueRef($filieres);
+                            ?>
+                            <?php ?>
                             <div><input type="checkbox" name="" id="chek1"> <label for="chek1"> Dev Web/Mobile</label></div>
-                            <div><input type="checkbox" name="" id="chek2"> <label for="chek2"> Dev Web/Mobile</label></div>
-                            <div><input type="checkbox" name="" id="chek3"> <label for="chek3"> Dev Web/Mobile</label></div>
-                            <div><input type="checkbox" name="" id="chek4"> <label for="chek4"> Dev Web/Mobile</label></div>
-                            <div><input type="checkbox" name="" id="chek5"> <label for="chek5"> Dev Web/Mobile</label></div>
                             <div class="blockInp">
                                <div class="end"><button type="submit">Back</button></div>
                                <div class="end"><button type="submit">Creer</button></div>

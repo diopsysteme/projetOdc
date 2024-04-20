@@ -144,7 +144,17 @@ function convdate($dateAnglais) {
     
     return $dateFrancais;
 }
-    
+
+function uniqueRef($tabs){
+    $datas=[];
+    foreach ($tabs as $tab) {
+        if (!in_array($tab['nom'], array_column($datas, 'nom'))) {
+            $datas[] = $tab;
+        }
+    }
+    return $datas;
+}
+
     
     ?>
 
