@@ -116,7 +116,6 @@ justify-content: start;
 }
 .P2:checked {
     color: red;
-    <?php  ?>
     
 }
         </style>
@@ -136,7 +135,7 @@ justify-content: start;
                             </div>
                             <div><span class=""><button  style="background-color:inherit" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button></span></div>
                         </form>
-                        <button>+ Nouvelle</button>
+                        <button onclick="window.location.href='?page=promo2'">+ Nouvelle</button>
                        </div>
                     </div>
                     <div class="listPromo">
@@ -182,3 +181,5 @@ justify-content: start;
                     height: 4vh;
                 }
             </style>
+
+  

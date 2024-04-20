@@ -128,15 +128,23 @@ else
                             } else {
                                 echo "Une erreur est survenue lors du téléchargement de l'image.";
                             }
+                            $allfilieres=readCsv(FILE.$page,".csv");
+                            $ids = array_column($allfilieres, 'id');
+
+
+                            $maxId = max($ids);
+
+// Afficher la valeur maximale de 'id'
                                 $newRef = array(
                                     "nom" => $libelle,
                                     "etat" =>"active" ,
                                     "promo" => $idPromo ,
                                     "description" =>$description ,
-                                    "image" =>$img
+                                    "image" =>$img,
+                                    "id" => $maxId+1,
                                 );
         
-                                $allfilieres=readCsv(FILE.$page,".csv");
+                                
                                 $allfilieres[]=$newRef;
                                 writeCsv(FILE.$page,".csv",$allfilieres);
                             } else {

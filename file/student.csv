@@ -1,15 +1,15 @@
 prenom,nom,date_naissance,lieu_naissance,mail,numero,referentiel,matricule,statut,sex,promo,passwd,role
-Aminata,Diop,1998-05-15,Dakar,aminata.diop@example.com,771234567,devweb,P4_DEVWEB_2024_1,1,M,P2,passer,etudiant
-Sow,Mamadou,1997-08-20,Thiès,mamadou.sow@example.com,776543210,devdata,P4_DEVDAT_2024_2,1,M,P2,passer,etudiant
-Fatou,Ndiaye,1999-03-10,Saint-Louis,fatou.ndiaye@example.com,778765432,refdig,P4_REFDIG_2024_3,1,M,P5,passer,etudiant
-Oumar,Diallo,1997-09-25,Ziguinchor,oumar.diallo@example.com,778765432,devweb,P4_DEVWEB_2024_6,1,M,P5,passer,etudiant
-Aïssatou,Niang,1998-04-12,Louga,aissatou.niang@example.com,776543219,devdata,P4_DEVDAT_2024_7,1,M,P1,passer,etudiant
-Moussa,Camara,1999-06-30,Kolda,moussa.camara@example.com,771234568,refdig,P4_REFDIG_2024_8,1,M,P1,passer,etudiant
-Rokhaya,Drame,1996-12-15,Tambacounda,rokhaya.drame@example.com,776543217,aws,P4_AWS_2024_9,actif,M,P1,passer,etudiant
-Abdoulaye,Gueye,2000-03-20,Fatick,abdoulaye.gueye@example.com,777654320,hackeuse,P6_HACKEUSE_2024_10,actif,M,P4,passer,etudiant
-Aminata,Traoré,1997-08-10,Dakar,aminata.traore@example.com,778765433,devweb,P6_DEVWEB_2024_11,actif,M,P4,passer,etudiant
-Mamadou,Dabo,1998-02-28,Thiès,mamadou.dabo@example.com,776543211,devdata,P6_DEVDAT_2024_12,actif,M,P4,passer,etudiant
-Fatou,Fall,1999-11-05,Saint-Louis,fatou.fall@example.com,771234569,refdig,P6_REFDIG_2024_13,actif,M,P5,passer,etudiant
-Cheikh,Kane,1996-10-18,Kaolack,cheikh.kane@example.com,776543219,aws,P6_AWS_2024_14,actif,M,P6,passer,etudiant
-Khady,Diallo,2000-01-10,Touba,com,777654322,hackeuse,P4_HACKEUSE_2024_15,actif,M,P6,passer,etudiant
+Aminata,Diop,1998-05-15,Dakar,aminata.diop@example.com,771234567,"Dev Web/Mobile",P4_DEVWEB_2024_1,1,M,P3,passer,etudiant
+Sow,Mamadou,1997-08-20,Thiès,mamadou.sow@example.com,776543210,"Dev data",P4_DEVDAT_2024_2,1,M,P2,passer,etudiant
+Fatou,Ndiaye,1999-03-10,Saint-Louis,fatou.ndiaye@example.com,778765432,"Dev data",P4_REFDIG_2024_3,1,M,P5,passer,etudiant
+Oumar,Diallo,1997-09-25,Ziguinchor,oumar.diallo@example.com,778765432,"Dev Web/Mobile",P4_DEVWEB_2024_6,1,M,P2,passer,etudiant
+Aïssatou,Niang,1998-04-12,Louga,aissatou.niang@example.com,776543219,"Dev data",P4_DEVDAT_2024_7,1,M,P1,passer,etudiant
+Moussa,Camara,1999-06-30,Kolda,moussa.camara@example.com,771234568,"Dev data",P4_REFDIG_2024_8,1,M,P1,passer,etudiant
+Rokhaya,Drame,1996-12-15,Tambacounda,rokhaya.drame@example.com,776543217,"Dev data",P4_AWS_2024_9,actif,M,P1,passer,etudiant
+Abdoulaye,Gueye,2000-03-20,Fatick,abdoulaye.gueye@example.com,777654320,AWS,P6_HACKEUSE_2024_10,actif,M,P4,passer,etudiant
+Aminata,Traoré,1997-08-10,Dakar,aminata.traore@example.com,778765433,"Dev Web/Mobile",P6_DEVWEB_2024_11,actif,M,P4,passer,etudiant
+Mamadou,Dabo,1998-02-28,Thiès,mamadou.dabo@example.com,776543211,"Dev data",P6_DEVDAT_2024_12,actif,M,P4,passer,etudiant
+Fatou,Fall,1999-11-05,Saint-Louis,fatou.fall@example.com,771234569,"Dev data",P6_REFDIG_2024_13,actif,M,P5,passer,etudiant
+Cheikh,Kane,1996-10-18,Kaolack,cheikh.kane@example.com,776543219,"Dev data",P6_AWS_2024_14,actif,M,P6,passer,etudiant
+Khady,Diallo,2000-01-10,Touba,com,777654322,AWS,P4_HACKEUSE_2024_15,actif,M,P6,passer,etudiant
 Khady,admin,2000-01-10,Touba,admin,777654322,admin,admin,admin,admin,"dd",passer,admin

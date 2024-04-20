@@ -1,13 +1,19 @@
-nom,etat,promo,description,image
-"Dev Web/Mobile",active,P1,dscription,default.jpeg
-"Referent Digital",active,P1,dscription,default.jpeg
-"Dev data",active,P1,dscription,default.jpeg
-"Dev Web/Mobile",active,P2,dscription,default.jpeg
-"Referent Digital",active,P2,dscription,default.jpeg
-"Referent Digital",active,P3,dscription,default.jpeg
-AWS,active,P3,dscription,default.jpeg
-"Dev Web/Mobile",active,P4,dscription,default.jpeg
-"Referent Digital",active,P4,dscription,default.jpeg
-AWS,active,P4,dscription,default.jpeg
-"Dev Web/Mobile",active,P5,dscription,default.jpeg
-"Referent Digital",active,P5,dscription,default.jpeg
+nom,etat,promo,description,image,id
+"Dev Web/Mobile",active,P1,dscription,default.jpeg,1
+"Referent Digital",active,P1,dscription,default.jpeg,2
+"Dev data",active,P1,dscription,default.jpeg,3
+"Dev Web/Mobile",active,P2,dscription,default.jpeg,1
+"Referent Digital",active,P2,dscription,default.jpeg,2
+"Referent Digital",active,P3,dscription,default.jpeg,2
+AWS,active,P3,dscription,default.jpeg,4
+"Dev Web/Mobile",active,P4,dscription,default.jpeg,1
+"Referent Digital",active,P4,dscription,default.jpeg,2
+AWS,active,P4,dscription,default.jpeg,4
+"Dev Web/Mobile",active,P5,dscription,default.jpeg,1
+"Referent Digital",active,P5,dscription,default.jpeg,2
+cybersec,active,inactif,cyber,"Capture d’écran du 2024-04-18 07-58-51.png",5
+hackeuse,active,P4,hacker,"Capture d’écran du 2024-04-18 07-58-53.png",6
+alas,active,P5,alas,default.jpeg,7
+AWS,active,inactif,aaaa,"Capture d’écran du 2024-04-18 07-58-44.png",8
+hqsh,active,inactif,kqsjkq,default.jpeg,9
+hqsh,active,inactif,kqsjkq,default.jpeg,10

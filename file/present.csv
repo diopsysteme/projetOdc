@@ -1,14 +1,14 @@
 prenom,nom,date_naissance,lieu_naissance,mail,numero,referentiel,matricule,statut,sex,heure_arrivee,retard,jour,promo
-Aminata,Diop,1998-05-15,Dakar,aminata.diop@example.com,771234567,devweb,P6_DEVWEB_2024_1,present,M,08:10,5,2024-04-18,P2
-Sow,Mamadou,1997-08-20,Thiès,mamadou.sow@example.com,776543210,devdata,P6_DEVDAT_2024_2,present,M,08:20,5,2024-04-18 ,P1
-Fatou,Ndiaye,1999-03-10,Saint-Louis,fatou.ndiaye@example.com,778765432,refdig,P6_REFDIG_2024_3,absent,M,2024-04-1,P1,-,-
+Aminata,Diop,1998-05-15,Dakar,aminata.diop@example.com,771234567,"Dev Web/Mobile",P6_DEVWEB_2024_1,absent,M,08:10,5,2024-04-18,P2
+Sow,Mamadou,1997-08-20,Thiès,mamadou.sow@example.com,776543210,"Dev data",P6_DEVDAT_2024_2,present,M,08:20,5,2024-04-18 ,P1
+Fatou,Ndiaye,1999-03-10,Saint-Louis,fatou.ndiaye@example.com,778765432,"Referent Digital",P6_REFDIG_2024_3,absent,M,2024-04-1,P1,-,-
 Oumar,Diallo,1997-09-25,Ziguinchor,oumar.diallo@example.com,778765432,devweb,P6_DEVWEB_2024_6,present,M,08:00,0,2024-04-1,P1
-Aïssatou,Niang,1998-04-12,Louga,aissatou.niang@example.com,776543219,devdata,P6_DEVDAT_2024_7,present,M,08:25,10,2024-04-,P1
-Moussa,Camara,1999-06-30,Kolda,moussa.camara@example.com,771234568,refdig,P6_REFDIG_2024_8,present,M,08:10,5,2024-04-,P2
+Aïssatou,Niang,1998-04-12,Louga,aissatou.niang@example.com,776543219,"Dev data",P6_DEVDAT_2024_7,present,M,08:25,10,2024-04-,P1
+Moussa,Camara,1999-06-30,Kolda,moussa.camara@example.com,771234568,"Referent Digital",P6_REFDIG_2024_8,present,M,08:10,5,2024-04-,P2
 Rokhaya,Drame,1996-12-15,Tambacounda,rokhaya.drame@example.com,776543217,aws,P6_AWS_2024_9,present,M,08:30,15,2024-07-04,P2
 Abdoulaye,Gueye,2000-03-20,Fatick,abdoulaye.gueye@example.com,777654320,hackeuse,P6_HACKEUSE_2024_10,absent,M,-,-,2024-07-04,P6
 Aminata,Traoré,1997-08-10,Dakar,aminata.traore@example.com,778765433,devweb,P6_DEVWEB_2024_11,absent,M,-,-,2024-07-04,P6
-Mamadou,Dabo,1998-02-28,Thiès,mamadou.dabo@example.com,776543211,devdata,P6_DEVDAT_2024_12,present,M,08:10,5,2024-04-15,P3
+Mamadou,Dabo,1998-02-28,Thiès,mamadou.dabo@example.com,776543211,"Dev data",P6_DEVDAT_2024_12,present,M,08:10,5,2024-04-15,P3
 Fatou,Fall,1999-11-05,Saint-Louis,fatou.fall@example.com,771234569,refdig,P6_REFDIG_2024_13,absent,M,-,-,2024-04-15,P6
 Cheikh,Kane,1996-10-18,Kaolack,cheikh.kane@example.com,776543219,aws,P6_AWS_2024_14,present,M,08:45,30,2024-07-06,P2
 Khady,Diallo,2000-01-10,Touba,khady.diallo@example.com,777654322,hackeuse,P6_HACKEUSE_2024_15,absent,M,08:00,0,2024-07-08,P3
