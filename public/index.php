@@ -199,20 +199,25 @@ else
         
             }
             if(isset($_POST["create"])|| isset($_POST["addRef"])){
+                unset($_SESSION["error"]) ;
             
-                echo"venu";
+            echo"venu";
             unset($_SESSION["error"]) ;
             unset($_SESSION["error"]["libelle"]) ;
             
             $_SESSION["error"]["libelle"]="";
             if(!empty($_POST["libelle"])){
-            if(isset($_POST["create"])){
-                if(empty($_POST["dateDeb"])||empty($_POST["dateFin"])){
+            if(isset($_POST["create"]))
+            {
+                
+                if(empty($_POST["dateDeb"])||empty($_POST["dateFin"]))
+                {
                     if(empty($_POST['dateDeb']))
                     $_SESSION["error"]["dateDeb"]="ce champs est obligatoire!!";
                     if(empty($_POST['dateFin']))
                     $_SESSION["error"]["dateFin"]="ce champs est obligatoire!!";
-            }else{
+                 }else{
+                    echo "creat!!!!!!!!!";
                 $dateDebut = new DateTime($_POST["dateDeb"]);
                 $dateFin = new DateTime($_POST["dateFin"]);
                 
@@ -233,12 +238,13 @@ else
 
                         addCsv(FILE."promo", ".csv", $newPromo);
                         $_SESSION["promoNew"] = $newPromo;
-                        ?> <script> window.location.href = '?page=promo1';</script><?php
+                        ?> <script> window.location.href = '?page=promo1'</script><?php
 
                     }else
-                    $_SESSION["error"]["libelle"]="cette promo existe deja";
+                     $_SESSION["error"]["libelle"]="cette promo existe deja";
                    
                 } else {
+                    $_SESSION["error"]["dateFin"]="minimum 4mois entre la date de debut et date de fin";
         
                     echo "pas bon";
                 }
