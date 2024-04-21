@@ -22,6 +22,7 @@ i{
 flex-direction: column;
 position: relative;
 justify-content: start;
+height: auto;
 }
 .page .bmid .cont.dash .listCrud{
     width: 95%;

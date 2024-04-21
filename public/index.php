@@ -198,6 +198,80 @@ else
             header("Location:");
         
             }
+            if(isset($_POST["create"])|| isset($_POST["addRef"])){
+            
+                echo"venu";
+            unset($_SESSION["error"]) ;
+            unset($_SESSION["error"]["libelle"]) ;
+            
+            $_SESSION["error"]["libelle"]="";
+            if(!empty($_POST["libelle"])){
+            if(isset($_POST["create"])){
+                if(empty($_POST["dateDeb"])||empty($_POST["dateFin"])){
+                    if(empty($_POST['dateDeb']))
+                    $_SESSION["error"]["dateDeb"]="ce champs est obligatoire!!";
+                    if(empty($_POST['dateFin']))
+                    $_SESSION["error"]["dateFin"]="ce champs est obligatoire!!";
+            }else{
+                $dateDebut = new DateTime($_POST["dateDeb"]);
+                $dateFin = new DateTime($_POST["dateFin"]);
+                
+                $diff = $dateFin->diff($dateDebut);
+                
+                $nbJoursDifference = $diff->days;
+    
+                if ($nbJoursDifference >= 120) {
+                    $data = array_map('str_getcsv', file(FILE."promo.csv"));
+                        $lastPromo = end($data);
+                  
+    
+                    if (isUniqueDesc($data)){
+                        var_dump($lastPromo);
+                        $newName = 'P' . (intval($lastPromo[0][1]) + 1);
+                        $newPromo = array("name"=>$newName,"dateDeb"=>$_POST["dateDeb"] ,"dateFin"=>$_POST["dateFin"],"description" =>$_POST["libelle"],"etat"=> 'inactive');
+                        $data[] = $newPromo;
+
+                        addCsv(FILE."promo", ".csv", $newPromo);
+                        $_SESSION["promoNew"] = $newPromo;
+                        ?> <script> window.location.href = '?page=promo1';</script><?php
+
+                    }else
+                    $_SESSION["error"]["libelle"]="cette promo existe deja";
+                   
+                } else {
+        
+                    echo "pas bon";
+                }
+                
+    // Calculer la différence entre les deux dates en mois
+                                                                                                                                                                                                                                                                                                                                                                                               
+            }
+            
+        }else{
+            $data =  readCsv(FILE."promo",".csv");
+            var_dump(!isUniqueDesc($data));
+            
+                foreach($data as $dat)
+                {
+                    if($dat["description"]==$_POST["libelle"])
+                    {
+                        $_SESSION["promoNew"] = $dat;
+                        var_dump($dat);
+                        ?> <script> window.location.href = '?page=promo1';</script><?php
+
+                        break;
+                        
+                    }
+                }
+            $_SESSION["error"]["libelle"]="vous voulez ajouter des refs a  '".$_POST["libelle"]."' cependant cette promo n'existe pas";
+    
+            
+            // $_SESSION["error"]["libelle"]="le libelle est obligatoire!!";
+        }
+        }else{
+            $_SESSION["error"]["libelle"]="le libelle est obligatoi!!";
+        }
+    }
             $referentielsFiltres=$_SESSION['filieres'];
             $namePactive=$_SESSION['promo']['name'];
             $descriptPactive=$_SESSION['promo']['description'];

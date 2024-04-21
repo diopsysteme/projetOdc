@@ -42,15 +42,16 @@ i{
                         </div>
                     </div>
                     <div class="contInp2">
-                        <div style="height:25vh;" class="labSelect">Selectionnez un ou plusieurs ref</div>
+                        <div style="height:25vh;" class="labSelect">Vous allez ajouter des referentiels à la  <span class="colorG"><?= $_SESSION["promoNew"]["description"]?></span></div>
                         <form action="" method="post">
                             <?php 
+                            
+                            $promoTochan=$_SESSION["promoNew"]["name"];
                                 $uniques = uniqueRef($filieres);
-                                if(stripos($unique["id"],$namePactive)!=false) echo "checked";
-                                if(stripos($namePactive,$unique["id"])) echo "checked";
+                                if(stripos($unique["id"],$promoTochan)!=false) echo "checked";
+                                if(stripos($promoTochan,$unique["id"])) echo "checked";
                                 $etudiants=readCsv(FILE."student",".csv");
-                                $etudiants=filterByprom($etudiants,$namePactive);
-                                var_dump(count($etudiants));
+                                $etudiants=filterByprom($etudiants,$promoTochan);
                                 $nbstudent=count($etudiants);
                                 function filtByRef($tabs,$name) {
                                     $etudiants = array();
@@ -63,7 +64,14 @@ i{
 
                                 return count($etudiants);
                             }
-
+                            $filieres=readCsv(FILE."referent",".csv");
+                            $a=array();
+                            foreach($filieres as $fil){
+                                if (stripos($fil["promo"], $promoTochan) !== false)
+                                {
+                                    $a[]=$fil;
+                                }
+                            }
                                 foreach ($uniques as $unique) {
                                     $checked = 0;
                                     foreach($a as $ref)

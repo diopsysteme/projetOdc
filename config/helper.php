@@ -44,9 +44,7 @@ function readCsv($file, $extension)
             // Combiner les noms de champs avec les données de la ligne actuelle
             $rowData = array_combine($headers, $row);
             $datas[] = $rowData;
-            
         }
-        
         return $datas;
     } else {
         die("Fichier introuvable");
@@ -88,10 +86,10 @@ function writeCsv($file, $extention, $data)
 
 function addCsv($file, $extension, $data)
 {
-    $fp = fopen($file . $extension, 'wa'); 
-    foreach ($data as $row) {
-        fputcsv($fp, $row);
-    }
+    $fp = fopen($file . $extension, 'a'); 
+
+        fputcsv($fp, $data);
+    
     fclose($fp);
 }
 
@@ -154,7 +152,16 @@ function uniqueRef($tabs){
     }
     return $datas;
 }
-
+function isUniqueDesc($data){
+    $isUniqueDescription = true;
+     foreach ($data as $row) {
+        if (strtolower(trim($row[3])) == strtolower(trim($_POST["libelle"]))) {
+            $isUniqueDescription = false;
+            break;
+        }
+    }
+    return $isUniqueDescription;
+}
     
     ?>
 

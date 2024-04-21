@@ -21,7 +21,7 @@
                     <div class="logo"><img src="<?=IMG.'logoS.png'?>" alt=""></div>
                     <div class="logText"><i class="fa-solid fa-minus"></i></span><span class="contText">Menu</span></div>
                     <div class="logText <?php if($_SESSION["user"]["role"]!="admin") echo "desactive";?>"><span class="log"><i class="fa-solid fa-bars-staggered"></i></span><span class="contText"><a class="<?php if($_SESSION["user"]["role"]!="admin") echo "desactive";?>"    style="color: #000000; text-decoration:none;" href="?page=dashboard">Dashboard</a></span></div>
-                    <div class="logText <?php if($_SESSION["user"]["role"]!="admin") echo "desactive";?>"><span class="log"><i class="fa-solid fa-clipboard"></i></span><span class="contText"><a class="<?php if($_SESSION["user"]["role"]!="admin") echo "desactive";?>"  style="color: #000000; text-decoration:none;" href="?page=promo1">Prom</a></span></div>
+                    <div class="logText <?php if($_SESSION["user"]["role"]!="admin") echo "desactive";?>"><span class="log"><i class="fa-solid fa-clipboard"></i></span><span class="contText"><a class="<?php if($_SESSION["user"]["role"]!="admin") echo "desactive";?>"  style="color: #000000; text-decoration:none;" href="?page=promo2">Prom</a></span></div>
                     <div class="logText <?php if($_SESSION["user"]["role"]!="admin") echo "desactive";?>"><span class="log"><i class="fa-solid fa-calendar-days"></i></span><span class="contText"><a class="<?php if($_SESSION["user"]["role"]!="admin") echo "desactive";?>"  style="color: #000000; text-decoration:none;" href="?page=referent">Référentiels</a></span></div>
                     <div class="logText <?php if($_SESSION["user"]["role"]!="admin") echo "desactive";?>"><span class="log"><i class="fa-regular fa-user"></i></span><span class="contText"><a class="<?php if($_SESSION["user"]["role"]!="admin") echo "desactive";?>"  style="color: #000000; text-decoration:none;" href="?page=student">Utilisateurs</a></span></div>
                     <div class="logText <?php if($_SESSION["user"]["role"]!="admin") echo "desactive";?>"><span class="log"><i class="fa-regular fa-user"></i></span><span class="contText"><a class="<?php if($_SESSION["user"]["role"]!="admin") echo "desactive";?>"  style="color: #000000; text-decoration:none;" href="#">Visiteurs</a></span></div>
@@ -58,3 +58,4 @@
                         </div>
                     </div>
                 </div>
+                
