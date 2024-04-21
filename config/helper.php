@@ -71,17 +71,18 @@ function readhCsv($file) {
 
 function writeCsv($file, $extention, $data)
 {
-    $fp = fopen($file . $extention, 'wa');
+    $fp = fopen($file . $extention, 'w');
 
     // Écrire les noms de colonnes dans le fichier CSV
     fputcsv($fp, array_keys($data[0]));
-
+var_dump("bakhna fii");
     // Écrire les données dans le fichier CSV
     foreach ($data as $row) {
         fputcsv($fp, $row);
     }
 
     fclose($fp);
+    var_dump("bakhna fii");
 }
 
 function addCsv($file, $extension, $data)

@@ -127,8 +127,9 @@ i{
                                     }
                                    
                                      $mergedArray = array_merge($mergedArray, $newTab);
+                                     var_dump($mergedArray);
                                      writeCsv(FILE."referent",".csv",$mergedArray);
-                                     ?> <script> window.location.href = '?page=referent';</script><?php
+                                     ?> <script> window.location.href ='?page=referent'</script><?php
                                     
                                 }
 
