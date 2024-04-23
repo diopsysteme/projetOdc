@@ -799,7 +799,7 @@ i{
     justify-content: center;
 }
 .page .bmid.bmid2 .dashPromE{
-    height: 8vh;
+    height: 5vh;
 width: 100%;
 background-color: white;
 margin-bottom: 1vh;
@@ -808,9 +808,9 @@ display: flex;
 position: relative;
 align-items: center;
 }
-.page .bmid.bmid2 .dashPromE .refE,
+
 .page .bmid.bmid2 .dashPromE .promoE{
-width: 50%;
+width: 70%;
 height: 60%;
 font-size:calc(1vh + .5vw);
 font-weight: bold;
@@ -851,7 +851,7 @@ background-color: rgb(35, 103, 116);
 }
 .page .bmid.bmid2 .dashPromE .refE{
     display: flex;
-    justify-content: end;}
+  }
     .page .bmid.bmid2 .contInp2{
         position: relative;
         height: 85%;

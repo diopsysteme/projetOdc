@@ -1,9 +1,103 @@
 <?php
  include '/var/www/html/projet/modele/modele.php';
 ?>
+<script>
+  function  hide(){
+    if(document.getElementById("formClose").style.display!="none")
+        document.getElementById("formClose").style.display = "none";
+    else
+    document.getElementById("formClose").style.display = "flex";
+   
+    }
+</script>
 <style>
-    
+
+  
+        .selectM{
+            margin: 0;
+  width: 15%;
+  position: absolute;
+  height: 20vh;
+  z-index: 3333;
+
+  right: 10;
+  top: 6%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  background-color:white ;
+ gap: 2%;
+ justify-content: center;
+ border: 1px lightblue solid;
+  
+            div{
+                margin-left: 5%;
+                width: 30%;
+                height: 35vh;
+               display: flex;
+                gap: 6%;
+                align-items: center;
+                font-size: 2vh;
+                font-weight: ;
+            }
+        }
+        span.colorG.printForm {
+           position:absolute;
+            z-index: 3333;
+            right:30;
+            top: 15;
+            font-size:calc(1vh + .5vw);
+font-weight: bold;
+        }
+        span.colorG.printForm:hover  {
+            ~.selectM{
+            
+            }
+           
+          
+        }
+        .selectM:hover{
+           
+
+
+        }
+        .page .bmid.bmid2 .dashPromE .refE:hover{
+            ~.selectM{
+                z-index: 3333;
+            }
+        }
+    .selectMulti{
+        width: 90%;
+    }
+    .page .bmid.bmid2 .selectM .valideS{
+        width: 50%;
+        height: 20%;
+        background-color: white;
+        border: solid 1px ;
+        position: absolute;
+        top: 80%;
+    }
+    .page .bmid.bmid2 .dashPromE .refE{
+        width: 18%;
+        display: flex;
+        
+        align-items: center;
+        justify-content:end ;
+        font-size:calc(1vh + .5vw);
+font-weight: bold;
+*{
+    margin-right:4% ;
+    padding: 0;
+    box-sizing: border-box;
+}
+    }
+
+
+
+
 </style>
+
 <div class="bint">
                     <div>Apprenants  </div>
                     <div>Promos > List > Details > Apprenants</div>
@@ -11,8 +105,43 @@
                 <div class="bmid bmid2">
                     <div class="dashPromE"> 
                         <div class="promoE">Promotion : <?=printPromo($descriptPactive)?></div>
-                        <div class="refE">Referentiel: <span class="colorG">Dev Web/mobile</span></div>
+                        <div class="refE">Referentiel:
+                        <?php 
+                        ?>
+                     
+                       
                     </div>
+            
+                    </div>
+                    <span class="colorG printForm" onclick="hide()"><?php echo $_POST["options"][0]?: "Filieres "  ?></span>
+                    <form action="" method="post" id="formClose" class="selectM">
+                    <?php 
+                            
+                           
+                            ?>
+<div>
+<input type="checkbox" id="all" <?php if(isset($_POST["allfil"])&&!isset($_POST["options"])) echo"checked"; ?> name="allfil" value="all" onchange="this.form.submit()"> <label for="all">all</label>
+
+</div>                      
+                        <?php foreach($a as $as){
+                            $checked=0;
+                            foreach($_POST["options"] as $key)
+                            {
+                                if($key==$as["nom"])
+                                $checked=1;
+                            }
+                            ?><div>  
+                            <input type="checkbox" id="<?=$as["id"]?>"  <?php if($checked || isset($_POST["allfil"])) echo"checked"; ?>  name="options[]"  onchange="this.form.submit()"  value="<?=$as["nom"]?>"><label for="<?=$as["id"]?>"><?=$as["nom"]?></label>
+                      </div>
+                        <?php 
+                            
+                        }
+                        ?>
+   
+      
+        <!-- <button type="submit" name="mfilt" class="valideS">valider</button>               -->
+</form>
+<?php ?>
                     <div class="cont">
                         <div class="vertical">
                                 <div class="vertInt">
@@ -72,7 +201,7 @@
                                             <div class="image norm "><div class="im"><img src="<?=IMG."icEtu.png"?>" alt=""></div></div>
                                             <div class="nom norm colorG"><?=$etudiant["nom"]?></div>
                                             <div class="prenom colorG"><?=$etudiant["prenom"]?></div>
-                                            <div class="mail "><?=$etudiant["mail"]?></div>
+                                            <div class="mail "><?=$etudiant["referentiel"]?></div>
                                             <div class="genre norm "><?=$etudiant["sex"]?></div>
                                             <div class="numero "><?=$etudiant["numero"]?></div>
                                             <div class="action norm "><?php if($etudiant["statut"]==1){?><div class="act"></div><?php } else {?><div class="act redBak"></div><?php }?></div>
@@ -110,3 +239,6 @@
                 </div>
 
 
+<style>
+
+</style>

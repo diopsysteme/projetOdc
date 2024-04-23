@@ -5,8 +5,16 @@ nom,etat,promo,description,image,id
 "Dev Web/Mobile",active,P4,dscription,default.jpeg,1
 "Referent Digital",active,P4,dscription,default.jpeg,2
 AWS,active,P4,dscription,default.jpeg,4
-"Dev Web/Mobile",active,P5,dscription,default.jpeg,1
-"Referent Digital",active,P5,dscription,default.jpeg,2
 cybersec,active,inactif,cyber,"Capture d’écran du 2024-04-18 07-58-51.png",5
 hackeuse,active,P4,hacker,"Capture d’écran du 2024-04-18 07-58-53.png",6
-AWS,active,P3,dscription,default.jpeg,4
+"Dev Web/Mobile",active,P5,dscription,default.jpeg,1
+"Referent Digital",active,P5,dscription,default.jpeg,2
+"Dev data",active,P5,dscription,default.jpeg,3
+"Dev Web/Mobile",active,P7,dscription,default.jpeg,1
+AWS,active,P7,dscription,default.jpeg,4
+"Referent Digital",active,P3,dscription,default.jpeg,2
+Xxxxvvv,active,inactif,xxxxx,default.jpeg,7
+Xxxx,active,inactif,xxxxx,default.jpeg,8
+Xxxx,active,inactif,xxxxx,default.jpeg,9
+Xxxx,active,inactif,xxxxx,default.jpeg,10
+Xxxx,active,P5,xxxxx,default.jpeg,11

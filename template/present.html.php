@@ -13,6 +13,7 @@
                             <option value="absent"  <?php if($_POST["statut"]=="absent") echo "selected"?>> Absent </option>
                             </select>
                             <select name="referentiel" id="" class="Referentiel">
+                            
                             <option value="" > Référentiels </option>
                             
                             <?php 

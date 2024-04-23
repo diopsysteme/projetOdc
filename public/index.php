@@ -89,7 +89,7 @@ else
                     $found=0;
                     $filieres=readCsv(FILE."referent",".csv");
                     foreach($filieres as $ref){
-                            if($_POST["libellé"]==$ref["nom"] && $idPromo!='inactif' && $_SESSION['promo']['name']==$ref["promo"]){
+                            if(strtoupper(trim($_POST["libellé"]))==strtoupper($ref["nom"]) && $idPromo!='inactif' && $_SESSION['promo']['name']==$ref["promo"]){
                             $found=1;
                             break;
                         }

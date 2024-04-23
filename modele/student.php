@@ -177,7 +177,25 @@ $etudiants=readCsv(FILE.$page,".csv");
 // var_dump($etudiants);
 if(isset($namePactive)){
     $etudiants=filterByprom($etudiants,$namePactive);
-
+    $newtab=$etudiants;
+    if(isset($_POST["options"])){
+        $newtab=[];
+    $allfilt=$_POST["options"];
+    foreach($etudiants as $etudiant){
+    foreach($allfilt as $fil)
+    {
+        if($etudiant["referentiel"]==$fil){
+    
+            $newtab[]=$etudiant;
+        }
+    }
+    }
+    $etudiants=$newtab;
+    
+    }
+    if(isset($_POST["allfilt"]))
+    $etudiants=$newtab;
+    $etudiants=$newtab;
     if (isset($_POST["search"])) {
         $_SESSION['filtStu'] = $_POST["search"];
     }else{
@@ -204,7 +222,7 @@ if (isset($_POST["search"])) {
  else {
         $result = $etudiants;
     }
-    $eleByPage = 2;
+    $eleByPage = 10;
     $pageEtu = isset($_GET['pageAff']) ? $_GET['pageAff'] : 1;
     $totalPage = ceil(count($result) / $eleByPage);
     $eleDeb = ($pageEtu - 1) * $eleByPage;
