@@ -22,6 +22,7 @@ i{
 flex-direction: column;
 position: relative;
 justify-content: start;
+height: auto;
 }
 .page .bmid .cont.dash .listCrud{
     width: 95%;
@@ -116,7 +117,6 @@ justify-content: start;
 }
 .P2:checked {
     color: red;
-    <?php  var_dump($_COOKIE); ?>
     
 }
         </style>
@@ -136,7 +136,7 @@ justify-content: start;
                             </div>
                             <div><span class=""><button  style="background-color:inherit" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button></span></div>
                         </form>
-                        <button>+ Nouvelle</button>
+                        <button onclick="window.location.href='?page=promo2'">+ Nouvelle</button>
                        </div>
                     </div>
                     <div class="listPromo">
@@ -151,6 +151,8 @@ justify-content: start;
                             ?>
                                 <div class="listPromo element">
                                     <div class="<?php if($namePactive==$promo["name"]) echo "colorG"; else echo "red"; ?>"><span><img src="<?php echo IMG.'promo.png' ?>" alt=""></span><?=$promo["description"]?></div>
+                                    <div > </div>
+
                                     <div class="image norm "><?=convdate($promo["dateDeb"])?></div>
                                     <div class="nom norm "><?=convdate($promo["dateFin"])?></div>
                                     <div class=""><form action="" method="post">
@@ -180,3 +182,5 @@ justify-content: start;
                     height: 4vh;
                 }
             </style>
+
+  

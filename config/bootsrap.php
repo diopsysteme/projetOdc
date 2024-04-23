@@ -10,7 +10,6 @@ define('IMG2','/var/www/html/projet/public/img/');
 $file=['present','student','promo1','promo2','referent','dashboard'];
 
 
-
 // Utiliser les constantes définies
  // Affiche l'URL de votre site
 // Affiche le chemin vers votre dossier de templates

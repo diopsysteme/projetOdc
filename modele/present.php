@@ -233,7 +233,7 @@ $presences1 = array(
     // writeCsv(FILE.$page,".csv",$presences1);
     $presences=readCsv(FILE.$page,".csv");
     $presences=filterByprom($presences,$namePactive);
-    $eleByPage=2;
+    $eleByPage=10;
     $pageEtu = $_GET['pageAff'] ?? 1;
     
     if(isset($_POST["statut"])||isset($_POST["search"]))

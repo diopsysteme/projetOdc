@@ -34,21 +34,34 @@ function printPromo($descriptPactive) {
 function readCsv($file, $extension)
 {
     $fp = fopen($file . $extension, "r");
+    $datas = [];
 
     if ($fp !== false) {
         // Lire la première ligne pour obtenir les noms des champs
         $headers = fgetcsv($fp);
 
+        while (($row = fgetcsv($fp)) !== false) {
+            // Combiner les noms de champs avec les données de la ligne actuelle
+            $rowData = array_combine($headers, $row);
+            $datas[] = $rowData;
+        }
+        return $datas;
+    } else {
+        die("Fichier introuvable");
+    }
+}
+function readhCsv($file) {
+    $fp = fopen($file, "r");
+    if ($fp !== false) {
+        // Lire la première ligne pour obtenir les noms des champs
+        $headers = fgetcsv($fp);
         $data = array();
-
         while (($row = fgetcsv($fp)) !== false) {
             // Combiner les noms de champs avec les données de la ligne actuelle
             $rowData = array_combine($headers, $row);
             $data[] = $rowData;
         }
-
         fclose($fp);
-
         return $data;
     } else {
         die("Fichier introuvable");
@@ -62,21 +75,22 @@ function writeCsv($file, $extention, $data)
 
     // Écrire les noms de colonnes dans le fichier CSV
     fputcsv($fp, array_keys($data[0]));
-
+var_dump("bakhna fii");
     // Écrire les données dans le fichier CSV
     foreach ($data as $row) {
         fputcsv($fp, $row);
     }
 
     fclose($fp);
+    var_dump("bakhna fii");
 }
 
 function addCsv($file, $extension, $data)
 {
-    $fp = fopen($file . $extension, 'wa'); 
-    foreach ($data as $row) {
-        fputcsv($fp, $row);
-    }
+    $fp = fopen($file . $extension, 'a'); 
+
+        fputcsv($fp, $data);
+    
     fclose($fp);
 }
 
@@ -129,7 +143,26 @@ function convdate($dateAnglais) {
     
     return $dateFrancais;
 }
-    
+
+function uniqueRef($tabs){
+    $datas=[];
+    foreach ($tabs as $tab) {
+        if (!in_array($tab['nom'], array_column($datas, 'nom'))) {
+            $datas[] = $tab;
+        }
+    }
+    return $datas;
+}
+function isUniqueDesc($data){
+    $isUniqueDescription = true;
+     foreach ($data as $row) {
+        if (strtolower(trim($row[3])) == strtolower(trim($_POST["libelle"]))) {
+            $isUniqueDescription = false;
+            break;
+        }
+    }
+    return $isUniqueDescription;
+}
     
     ?>
 
