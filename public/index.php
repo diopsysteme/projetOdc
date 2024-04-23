@@ -231,7 +231,6 @@ else
                   
     
                     if (isUniqueDesc($data)){
-                        var_dump($lastPromo);
                         $newName = 'P' . (intval($lastPromo[0][1]) + 1);
                         $newPromo = array("name"=>$newName,"dateDeb"=>$_POST["dateDeb"] ,"dateFin"=>$_POST["dateFin"],"description" =>$_POST["libelle"],"etat"=> 'inactive');
                         $data[] = $newPromo;
@@ -255,14 +254,12 @@ else
             
         }else{
             $data =  readCsv(FILE."promo",".csv");
-            var_dump(!isUniqueDesc($data));
             
                 foreach($data as $dat)
                 {
                     if($dat["description"]==$_POST["libelle"])
                     {
                         $_SESSION["promoNew"] = $dat;
-                        var_dump($dat);
                         ?> <script> window.location.href = '?page=promo1';</script><?php
 
                         break;

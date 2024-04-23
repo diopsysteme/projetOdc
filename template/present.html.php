@@ -12,6 +12,7 @@
                             <option value="present" <?php if($_POST["statut"]=="present") echo "selected"?>> Présent </option>
                             <option value="absent"  <?php if($_POST["statut"]=="absent") echo "selected"?>> Absent </option>
                             </select>
+                            <?php if($_SESSION["user"]["role"]=="admin") {?>
                             <select name="referentiel" id="" class="Referentiel">
                             
                             <option value="" > Référentiels </option>
@@ -23,7 +24,25 @@
                             <?php } ?>
                             
                             </select>
-                            <input type="date" name="jour" placeholder="Date" value="<?php if($_POST["jour"] == "refdig") echo $_POST["jour"]; else echo date('Y-m-d'); ?>">
+                            <?php }else{?>
+                            <?php  ?>
+                            <select name="referentiel" id="" class="Referentiel" disabled>
+                            
+                            <option value="" > <?=$_SESSION["user"]["referentiel"]  ?> </option>
+                            
+                            <?php 
+                            
+                            foreach($referentielsFiltres as $refer){?>
+                                <option value="<?=$refer["nom"]?>"  <?php if($_POST["referentiel"]==$refer["nom"]) echo "selected"?>><?=$refer["nom"]?> </option>
+                            <?php } ?>
+                            </select>
+                            <?php }?>
+                            <?php if($_SESSION["user"]["role"]=="admin") {?>
+                                <input type="date" name="jour" placeholder="Date" value="<?php if(isset($_POST["jour"])) echo $_POST["jour"]; else echo date('Y-m-d'); ?>">
+                            <?php }else{?>
+                                <input type="date" name="jour" placeholder="Date" value="<?php if(isset($_POST["jour"])) echo $_POST["jour"]; ?>">
+                            <?php }?>
+                          
                             <button type="submit" class="butFilt">Rafraichir</button>
                         </form>
                         <div class="listEtu">

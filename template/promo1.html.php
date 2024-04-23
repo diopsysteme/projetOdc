@@ -45,7 +45,6 @@ i{
                         <div style="height:25vh;" class="labSelect">Vous allez ajouter des referentiels à la  <span class="colorG"><?= $_SESSION["promoNew"]["description"]?></span></div>
                         <form action="" method="post">
                             <?php 
-                            var_dump($_POST);
                             function filtByRef($tabs,$name) {
                                 $etudiants = array();
                                 foreach($tabs as $tab) {
@@ -57,7 +56,6 @@ i{
                             return count($etudiants);
                         }
                             $promoTochan=$_SESSION["promoNew"]["name"];
-                            var_dump($promoTochan);
                                 $uniques = uniqueRef($filieres);
                                 if(stripos($unique["id"],$promoTochan)!=false) echo "checked";
                                 if(stripos($promoTochan,$unique["id"])) echo "checked";
@@ -127,7 +125,6 @@ i{
                                     }
                                    
                                      $mergedArray = array_merge($mergedArray, $newTab);
-                                     var_dump($mergedArray);
                                      writeCsv(FILE."referent",".csv",$mergedArray);
                                      ?> <script> window.location.href ='?page=referent'</script><?php
                                     

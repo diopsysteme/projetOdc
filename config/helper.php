@@ -41,7 +41,6 @@ function readCsv($file, $extension)
         $headers = fgetcsv($fp);
 
         while (($row = fgetcsv($fp)) !== false) {
-            // Combiner les noms de champs avec les données de la ligne actuelle
             $rowData = array_combine($headers, $row);
             $datas[] = $rowData;
         }
@@ -75,14 +74,12 @@ function writeCsv($file, $extention, $data)
 
     // Écrire les noms de colonnes dans le fichier CSV
     fputcsv($fp, array_keys($data[0]));
-var_dump("bakhna fii");
     // Écrire les données dans le fichier CSV
     foreach ($data as $row) {
         fputcsv($fp, $row);
     }
 
     fclose($fp);
-    var_dump("bakhna fii");
 }
 
 function addCsv($file, $extension, $data)

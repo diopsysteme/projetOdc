@@ -239,6 +239,18 @@ $presences1 = array(
     if(isset($_POST["statut"])||isset($_POST["search"]))
     $_SESSION['affichePresence'] = $_REQUEST;
 
+    if($_SESSION["user"]["role"]=="etudiant" && !isset($_POST["jour"]))
+   { $_SESSION["affichePresence"]["jour"] = "";
+    $_SESSION["affichePresence"]["statut"] = "";
+}
+    if($_SESSION["user"]["role"]=="admin" && !isset($_POST["jour"]))
+   { $_SESSION["affichePresence"]["jour"] = date("Y-m-d");
+    $_SESSION["affichePresence"]["statut"] = "";
+    $_SESSION["affichePresence"]["referentiel"] = "";
+    
+}
+
+
 function filtrerPresences($presences) {
     
     $sess=$_SESSION["affichePresence"];
@@ -253,13 +265,24 @@ function filtrerPresences($presences) {
 }
 if(isset($_POST["statut"])||isset($_POST["search"]))
 $listeFiltre = array_filter($presences, 'filtrerPresences');
-else
-$listeFiltre = $presences;
+else{
+    
+    $listeFiltre = array_filter($presences, 'filtrerPresences');
+}
+if($_SESSION["user"]["role"]=="etudiant"){
+    $tabTemp=[];
+    foreach($listeFiltre as $filtre){
+        if($_SESSION["user"]["mail"]==$filtre['mail'])
+        $tabTemp[]=$filtre;
+    }
+    $listeFiltre=$tabTemp;
+}
+
 
 $totalPage=ceil(count($listeFiltre)/$eleByPage);
 
 if($pageEtu<1 || $pageEtu>$totalPage)
 $pageEtu= 0;
         $eleDeb = ($pageEtu-1)*$eleByPage;
-        $etudiantsPage = array_slice($listeFiltre, $eleDeb, $eleByPage); 
+        $etudiantsPage = array_slice($listeFiltre, $eleDeb, $eleByPage);
 
